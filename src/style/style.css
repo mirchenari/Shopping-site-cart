@@ -230,6 +230,10 @@ main img{
         padding: 30px;
     }
 
+    .cart{
+        width: 75%;
+    }
+
     .products{
         grid-template-columns: 1fr;
     }
