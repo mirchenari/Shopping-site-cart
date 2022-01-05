@@ -231,7 +231,7 @@ main img{
     }
 
     .cart{
-        width: 75%;
+        max-width: 100%;
     }
 
     .products{
