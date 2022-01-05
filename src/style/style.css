@@ -1,0 +1,230 @@
+:root{
+    --primary-color: #6d28d9;
+    --secondary-color: #ede9fe;
+    --red-color: #db2777;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+
+body{
+    background-color: #F6F6F6;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.body-background{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.header-page{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 150px;
+    background-color: var(--secondary-color);
+}
+
+.hamburger-container{
+    cursor: pointer;
+    height: 22px;
+}
+
+.hamburger-container > span{
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--primary-color);
+    position: relative;
+    border-radius: 2px;
+}
+
+.hamburger-container > span::after, .hamburger-container > span::before{
+    content: '';
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    border-radius: inherit;
+    position: absolute;
+    top: -10px;
+}
+
+.hamburger-container > span::before{
+    top: 10px;
+}
+
+.header-cart-icon{
+    font-size: 27px;
+    color: var(--primary-color);
+    position: relative;
+    cursor: pointer;
+}
+
+.header-cart-icon > #cart-num{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--red-color);
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    background-color: #fff;
+}
+
+.cart.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.cart > *{
+    padding: 20px 25px;
+}
+
+.cart-header, .cart-container > article, .cart-footer > .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header > p{
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cart-header > p:hover{
+    color: var(--red-color);
+}
+
+.cart-container{
+    margin-bottom: auto;
+    overflow: auto;
+}
+
+.cart-container > article{
+    border-top: 1px solid rgb(197, 197, 197);
+    padding: 20px 0;
+}
+
+.cart-container > article > .cart-num{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-container i{
+    cursor: pointer;
+    color: var(--red-color);
+}
+
+.cart-container > article > .cart-num > i:first-child{
+    color: var(--primary-color);
+}
+
+.cart img{
+    width: 100px;
+    border-radius: 10px;
+}
+
+.cart-footer{
+    border-top: 1px solid rgb(197, 197, 197);
+    background-color: #fff;
+}
+
+.cart-footer > .total{
+    margin-bottom: 20px;
+}
+
+.cart-footer a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #3D885C;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+/* main */
+main > section{
+    padding: 30px 120px;
+}
+
+.main-title{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.products > article{
+    display: grid;
+    grid-gap: 25px;
+    background-color: #fff;
+    padding-bottom: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+main img{
+    max-width: 100%;
+}
+
+.product-title{
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-cart{
+    display: flex;
+    justify-content: center;
+}
+
+.add-cart-btn{
+    padding: 8px 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+}

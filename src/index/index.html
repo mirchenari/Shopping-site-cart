@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans"> <!-- google font -->
+</head>
+
+<body>
+    <div class="body-background hidden"></div>
+
+    <div class="cart">
+        <header class="cart-header">
+            <h2>Your Cart</h2>
+            <p><i class="fas fa-close"></i> <span>Close</span></p>
+        </header>
+
+        <div class="cart-container"></div>
+
+        <footer class="cart-footer">
+            <div class="total">
+                <h2>Total price:</h2>
+                <h2 id="total" style="color: var(--red-color);">0.00 $</h2>
+            </div>
+
+            <div class="payment">
+                <a href="#">payment</a>
+            </div>
+        </footer>
+    </div>
+
+    <header class="header-page">
+        <div class="hamburger-menu">
+            <div class="hamburger-container">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="header-title">
+            <h1>Online Shopping</h1>
+        </div>
+
+        <div class="header-cart-icon">
+            <i class="fas fa-cart-plus"></i>
+            <div id="cart-num">0</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="main-title">
+            <h2>Our products</h2>
+        </section>
+
+        <section class="products"></section>
+    </main>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../script/script.js" type="module"></script>
+</body>
+
+</html>
